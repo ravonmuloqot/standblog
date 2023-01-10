@@ -14,7 +14,12 @@ header {
   height: var(--navbar-height);
   width: 100%;
   padding: 25px 0;
+  background-color: white;
   box-shadow: 0 5px 9px 0 rgba(195, 195, 195, 0.498);
+}
+
+.sticky_header {
+  position: fixed;
 }
 
 header > nav {
@@ -63,3 +68,60 @@ header h1 {
     display: block;
   }
 }
+
+/* ----------------------  Main section  ------------------------------- */
+
+.main_section {
+  width: 100%;
+  padding: 15px;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.card_wrapper {
+  width: 33.3%;
+  min-width: 330px;
+  min-height: 400px;
+  position: relative;
+}
+
+.card_wrapper > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card_contents {
+  color: white;
+
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.card_category {
+  color: orange;
+}
+
+.card_contents > ul {
+  display: flex;
+}
+
+.card_contents > ul li {
+}
+
+@media (max-width: 1000px) {
+  .card_wrapper {
+    display: none;
+  }
+
+  .card_wrapper:first-child {
+    width: 100%;
+    display: block;
+  }
+}
+
+/*  ----------- footer -----------*/
